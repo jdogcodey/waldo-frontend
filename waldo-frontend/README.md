@@ -9,3 +9,4 @@ On the front end, I need the user to input their username, then show them an ima
 Also I will have a leaderboard page separately. 
 
 To Do List: 
+ - 
