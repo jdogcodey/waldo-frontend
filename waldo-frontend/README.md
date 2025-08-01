@@ -1,12 +1,11 @@
-# React + Vite
+# Waldo Front End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is following the Where's Waldo Project as on The Odin Project. 
 
-Currently, two official plugins are available:
+So, I think that I have set up the backend correctly. Thus far I have GET scores, POST start game and POST finish game. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+On the front end, I need the user to input their username, then show them an image and when they click on it register where they click and send this to the backend. 
 
-## Expanding the ESLint configuration
+Also I will have a leaderboard page separately. 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To Do List: 
