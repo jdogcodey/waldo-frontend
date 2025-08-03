@@ -1,4 +1,6 @@
 export default function WaldoImage() {
+
+
     async function clickImg(e) {
         let imgRect = e.target.getBoundingClientRect();
         let x = e.clientX - imgRect.left;

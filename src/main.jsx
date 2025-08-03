@@ -1,8 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom' 
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom' 
 import Root from './routes/Root.jsx'
+import ErrorPage from './routes/ErrorPage.jsx'
+import Homepage from './routes/Homepage.jsx'
+import WaldoImage from './routes/WaldoImage.jsx'
+import Leaderboard from './routes/Leaderboard.jsx'
+import { AppProvider } from './contexts/AppContext.jsx'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Root />} errorElement={<ErrorPage />}>
@@ -14,6 +19,8 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  </StrictMode>
+);
