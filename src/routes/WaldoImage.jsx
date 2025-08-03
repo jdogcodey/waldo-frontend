@@ -3,7 +3,8 @@ export default function WaldoImage() {
         let imgRect = e.target.getBoundingClientRect();
         let x = e.clientX - imgRect.left;
         let y = e.clientY - imgRect.top;
-        console.log('x', 'y')
+        console.log(x)
+        console.log(y)
         // const baseURL = import.meta.env.VITE_API_BASE_URL;
         // const response = await fetch(`${baseURL}/endgame`, {
         //     method: 'POST',
@@ -19,6 +20,6 @@ export default function WaldoImage() {
         // })
     }
     return (
-        <img src='' alt="Where's Waldo... I can't give you clues" onClick={clickImg()}/>
+        <img src='../assets/wp7156925-wheres-wally-wallpapers.jpg' alt="Where's Waldo... I can't give you clues" onClick={clickImg()}/>
     )
 }

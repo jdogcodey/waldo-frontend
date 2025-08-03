@@ -8,6 +8,7 @@ const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Root />} errorElement={<ErrorPage />}>
     <Route index element={<Homepage />} />
     <Route path='/wheres-waldo' element={<WaldoImage />} />
+    <Route path='/leaderboard' element={<Leaderboard />} />
   </Route>
 ))
 
