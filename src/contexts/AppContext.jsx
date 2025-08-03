@@ -5,9 +5,10 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
     const [username, setUsername] = useState(null);
     const [sessionID, setSessionID] = useState(null);
+    const [timeTaken, setTimeTaken] = useState(null)
 
     return (
-        <AppContext.Provider value={{ username, setUsername, sessionID, setSessionID }}>
+        <AppContext.Provider value={{ username, setUsername, sessionID, setSessionID, timeTaken, setTimeTaken }}>
             {children}
         </AppContext.Provider>
     );
