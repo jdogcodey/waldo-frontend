@@ -9,6 +9,12 @@ export default function WaldoImage() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        if (!username) {
+            navigate('/')
+        }
+    })
+
+    useEffect(() => {
         if (sessionID && username) {
             setSessionIDReturned(true)
         }
@@ -26,12 +32,12 @@ export default function WaldoImage() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: {
+            body: JSON.stringify({
                 x: x,
                 y: y,
                 id: sessionID,
                 username: username,
-            }
+            })
         })
         .then(res => res.json())
         .then(json => {
@@ -42,18 +48,20 @@ export default function WaldoImage() {
                 console.error('Failed to end the game')
             }
         })
+        .then(() => {
+            // Small delay to ensure DB consistency
+            setTimeout(() => navigate('/leaderboard'), 100);
+        })
         .catch(err => {
             console.error('Error', err)
         })
 
-        navigate('/leaderboard')
-
+        
     }
     return (
         <main>
-            <h1>Click on Waldo</h1>
-            <img src={waldoImage} alt="Where's Waldo... I can't give you clues" onClick={e => clickImg(e)} style={{pointerEvents: sessionIDReturned ? 'auto' : 'none'}}
-            />
+                <h1>Click on Waldo</h1>
+                <img src={waldoImage} alt="Where's Waldo... I can't give you clues" onClick={e => clickImg(e)} style={{pointerEvents: sessionIDReturned ? 'auto' : 'none'}}/>
         </main>
         
     )
