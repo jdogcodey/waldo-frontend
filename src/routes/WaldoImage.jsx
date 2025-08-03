@@ -1,7 +1,9 @@
+import waldoImage from '../assets/wp7156925-wheres-wally-wallpapers.jpg'
+
 export default function WaldoImage() {
 
 
-    async function clickImg(e) {
+    function clickImg(e) {
         let imgRect = e.target.getBoundingClientRect();
         let x = e.clientX - imgRect.left;
         let y = e.clientY - imgRect.top;
@@ -22,6 +24,10 @@ export default function WaldoImage() {
         // })
     }
     return (
-        <img src='../assets/wp7156925-wheres-wally-wallpapers.jpg' alt="Where's Waldo... I can't give you clues" onClick={clickImg()}/>
+        <main>
+            <h1>Click on Waldo</h1>
+            <img src={waldoImage} alt="Where's Waldo... I can't give you clues" onClick={e => clickImg(e)}/>
+        </main>
+        
     )
 }
