@@ -8,6 +8,7 @@ import Homepage from './routes/Homepage.jsx'
 import WaldoImage from './routes/WaldoImage.jsx'
 import Leaderboard from './routes/Leaderboard.jsx'
 import { AppProvider } from './contexts/AppContext.jsx'
+import './index.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Root />} errorElement={<ErrorPage />}>

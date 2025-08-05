@@ -5,9 +5,14 @@ export default function Header() {
     return (
         <header>
             <Link to='/'>
-                <h1>
-                    Where's Waldo
+            <div className='page-title'>
+                <h1 className='wheres'>
+                    WHERE'S 
                 </h1>
+                <h1 className='waldo'>
+                    WALDO?
+                </h1>
+            </div>
             </Link>
             <nav>
                 <NavLink to='/'>Home</NavLink>

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useAppContext } from '../contexts/AppContext';
+import { Link } from 'react-router-dom';
 
 export default function Leaderboard() {
-    const { userResult } = useAppContext();
+    const { userResult, unsuccess } = useAppContext();
     const [leaderboard, setLeaderboard] = useState(null);
     const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -31,6 +32,13 @@ export default function Leaderboard() {
     return (
         <main>
             <h1>Leaderboard</h1>
+            {unsuccess && <div>
+                <h2>Unfortunately you aren't on it...</h2>
+                <p>You didn't manage to find him</p>
+                <Link to='/'>
+                <p>Try Again</p>
+                </Link>
+                </div>}
             {leaderboard && <div>
                 <table>
                     <thead>

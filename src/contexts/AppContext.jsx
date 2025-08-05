@@ -6,9 +6,10 @@ export function AppProvider({ children }) {
     const [username, setUsername] = useState(null);
     const [sessionID, setSessionID] = useState(null);
     const [userResult, setUserResult] = useState(null);
+    const [unsuccess, setUnsuccess] = useState(null);
 
     return (
-        <AppContext.Provider value={{ username, setUsername, sessionID, setSessionID, userResult, setUserResult }}>
+        <AppContext.Provider value={{ username, setUsername, sessionID, setSessionID, userResult, setUserResult, unsuccess, setUnsuccess }}>
             {children}
         </AppContext.Provider>
     );
