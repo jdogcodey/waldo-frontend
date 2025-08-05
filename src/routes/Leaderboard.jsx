@@ -24,9 +24,8 @@ export default function Leaderboard() {
     }, [baseURL])
 
     function isMyResult(eleID) {
-        if (parseInt(eleID) === parseInt(userResult.id)) {
-            return true
-        } else return false
+        if (!userResult) return false; 
+        return parseInt(eleID) === parseInt(userResult.id);
     }
 
     return (
