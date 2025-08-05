@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useAppContext } from '../contexts/AppContext';
 
 export default function Leaderboard() {
+    const { userResult } = useAppContext();
     const [leaderboard, setLeaderboard] = useState(null);
     const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -21,6 +23,12 @@ export default function Leaderboard() {
         })
     }, [baseURL])
 
+    function isMyResult(eleID) {
+        if (parseInt(eleID) === parseInt(userResult.id)) {
+            return true
+        } else return false
+    }
+
     return (
         <main>
             <h1>Leaderboard</h1>
@@ -35,7 +43,7 @@ export default function Leaderboard() {
                     </thead>
                     <tbody>
                     {leaderboard.map((element, index) => (
-                        <tr key={index}>
+                        <tr key={index} className={isMyResult(element.id) ? 'player-score' : '' }>
                             <td>{index + 1}</td>
                             <td>{element.username}</td>
                             <td>{(element.completionTime / 1000).toFixed(2)} Seconds</td>

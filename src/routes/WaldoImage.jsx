@@ -4,7 +4,7 @@ import { useAppContext } from '../contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 
 export default function WaldoImage() {
-    const { username, sessionID, setTimeTaken } = useAppContext();
+    const { username, sessionID, setUserResult } = useAppContext();
     const [sessionIDReturned, setSessionIDReturned] = useState(false)
     const navigate = useNavigate();
 
@@ -42,8 +42,8 @@ export default function WaldoImage() {
         .then(res => res.json())
         .then(json => {
             if (json.success) {
-                const timeTaken = json.data.timeTaken;
-                setTimeTaken(timeTaken)
+                const userResult = json.data.userResult;
+                setUserResult(userResult)
             } else {
                 console.error('Failed to end the game')
             }
