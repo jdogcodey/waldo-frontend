@@ -29,14 +29,28 @@ a {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    border: solid;
+    
 }
 
 .wheres {
     color: #00b0f3;
+    text-shadow:
+            1px 1px 0 ,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            0 0 1px black;
 }
 
 .waldo {
     color: #ff2216;
+    text-shadow:
+            1px 1px 0,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            0 0 1px black;
 }
 
 main {
