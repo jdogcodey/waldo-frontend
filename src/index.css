@@ -60,7 +60,10 @@ a {
     margin-bottom: 0.3rem;
 }
 
-
+nav {
+    display: flex;
+    align-items: center;
+}
 
 main {
     flex: 1;
