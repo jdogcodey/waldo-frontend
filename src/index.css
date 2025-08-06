@@ -4,6 +4,7 @@ body {
     padding: 0;
     height: 100%;
     font-family: 'Cooper Black', 'Comic Sans MS', sans-serif;
+    font-size: 16px;
 }
 
 .page-wrapper {
@@ -29,28 +30,34 @@ a {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: solid;
-    
+    border: dashed black 1px;
+	box-shadow: 4px 4px 1px 0px #8CD5F5;
 }
 
 .wheres {
     color: #00b0f3;
-    text-shadow:
+    /* text-shadow:
             1px 1px 0 ,
             -1px -1px 0 black,
             1px -1px 0 black,
             -1px 1px 0 black,
-            0 0 1px black;
+            0 0 1px black; */
+    margin-top: 5px;
+    margin-left:  10px;
+    margin-bottom: 5px;
 }
 
 .waldo {
     color: #ff2216;
-    text-shadow:
+    /* text-shadow:
             1px 1px 0,
             -1px -1px 0 black,
             1px -1px 0 black,
             -1px 1px 0 black,
-            0 0 1px black;
+            0 0 1px black; */
+    margin-top: 5px;
+    margin-right:  10px;
+    margin-bottom: 5px;
 }
 
 main {
