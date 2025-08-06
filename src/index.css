@@ -15,7 +15,7 @@ body {
 
 header {
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,7 +29,7 @@ a {
 .page-title {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 0.5rem;
     border: dashed black 1px;
 	box-shadow: 4px 4px 1px 0px #8CD5F5;
 }
@@ -42,9 +42,9 @@ a {
             1px -1px 0 black,
             -1px 1px 0 black,
             0 0 1px black; */
-    margin-top: 5px;
-    margin-left:  10px;
-    margin-bottom: 5px;
+    margin-top: 0.3rem;
+    margin-left:  0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .waldo {
@@ -55,10 +55,12 @@ a {
             1px -1px 0 black,
             -1px 1px 0 black,
             0 0 1px black; */
-    margin-top: 5px;
-    margin-right:  10px;
-    margin-bottom: 5px;
+    margin-top: 0.3rem;
+    margin-right:  0.5rem;
+    margin-bottom: 0.3rem;
 }
+
+
 
 main {
     flex: 1;
