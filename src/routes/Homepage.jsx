@@ -35,7 +35,7 @@ export default function Homepage() {
         <main className="wally-bg">
             <div className="homepage">
                 <form onSubmit={startGame}>
-                    <label htmlFor="username"><h2>Input a Username to be on the Leaderboard</h2></label>
+                    <label htmlFor="username"><h2>Think you can find him?</h2></label>
                     <input
                         type="text"
                         id='username'
@@ -46,7 +46,7 @@ export default function Homepage() {
                     />
                     <input type='submit' value='Start' id='submit'/>
                 </form>
-                <p id='my-waffle'>This project is following <a href='https://www.theodinproject.com/'>The Odin Project</a>. Whilst fun in this format, the same basic premise could be used in a photo tagging app. If you want to check out the code that make this work then please visit my <a href='https://github.com/jdogcodey'>GitHub</a>.</p>
+                <p id='my-waffle'>This project is following <a href='https://www.theodinproject.com/'>The Odin Project</a>. This is more fun, but the same basic premise could be used more practically in a photo tagging app. If you want to check out the code that make this work then please visit my <a href='https://github.com/jdogcodey'>GitHub</a>.</p>
             </div>
         </main>
     );
