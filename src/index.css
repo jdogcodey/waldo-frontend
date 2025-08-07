@@ -90,5 +90,8 @@ main {
 footer {
     background-color: #252525;
     color: white;
-    padding: 1rem;
+    padding: 0.3rem;
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: center;
 }
