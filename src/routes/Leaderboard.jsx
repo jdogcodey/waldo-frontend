@@ -31,7 +31,8 @@ export default function Leaderboard() {
 
     return (
         <main>
-            <h1>Leaderboard</h1>
+            <div id='leaderboard-wrapper'>
+            <h1 id='leaderboard-title'>Leaderboard</h1>
             {unsuccess && <div>
                 <h2>Unfortunately you aren't on it...</h2>
                 <p>You didn't manage to find him</p>
@@ -40,7 +41,7 @@ export default function Leaderboard() {
                 </Link>
                 </div>}
             {leaderboard && <div>
-                <table>
+                <table id='leaderboard-table'>
                     <thead>
                         <tr>
                             <th>Position</th>
@@ -59,6 +60,7 @@ export default function Leaderboard() {
                     </tbody>
                 </table>
             </div>}
+            </div>
         </main>
     )
 }

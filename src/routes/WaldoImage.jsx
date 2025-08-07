@@ -41,9 +41,10 @@ export default function WaldoImage() {
         })
         .then(res => res.json())
         .then(json => {
+            console.log(json)
             if (json.success) {
                 const userResult = json.data.userResult;
-                if (!userResult) {setUnsuccess(true)}
+                if (!userResult) {setUnsuccess(true)} else setUnsuccess(null)
                 setUserResult(userResult)
             } else {
                 console.error('Failed to end the game')
@@ -61,7 +62,7 @@ export default function WaldoImage() {
         
     }
     return (
-        <main>
+        <main id='waldo-page'>
                 <h1>Click on Waldo</h1>
                 <img src={waldoImage} alt="Where's Waldo... I can't give you clues" onClick={e => clickImg(e)} style={{pointerEvents: sessionIDReturned ? 'auto' : 'none'}}/>
         </main>
