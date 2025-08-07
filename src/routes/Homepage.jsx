@@ -32,22 +32,21 @@ export default function Homepage() {
     }
 
     return (
-        <main>
-            <div>
-                <h1>Where's Waldo!</h1>
-                <p>This is part of <a href='https://www.theodinproject.com/'>The Odin Project</a>. This application is similar to a photo tagging application - and could be extended to have more of that functionality. To see how it works please visit my <a href='https://github.com/jdogcodey'>GitHub</a></p>
+        <main className="wally-bg">
+            <div className="homepage">
                 <form onSubmit={startGame}>
-                    <label htmlFor="username"><h1>Input a Username for the Leaderboard</h1></label>
+                    <label htmlFor="username"><h2>Input a Username to be on the Leaderboard</h2></label>
                     <input
                         type="text"
                         id='username'
                         name='username'
                         onChange={e => setUsername(e.target.value)}
                         value={username || ''}
+                        placeholder='Username'
                     />
-                    <p>When you click Start Game the game starts instantly - are you ready?</p>
-                    <input type='submit' value='Start Game' />
+                    <input type='submit' value='Start' id='submit'/>
                 </form>
+                <p id='my-waffle'>This project is following <a href='https://www.theodinproject.com/'>The Odin Project</a>. Whilst fun in this format, the same basic premise could be used in a photo tagging app. If you want to check out the code that make this work then please visit my <a href='https://github.com/jdogcodey'>GitHub</a>.</p>
             </div>
         </main>
     );
